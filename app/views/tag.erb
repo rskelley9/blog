@@ -1,0 +1,15 @@
+<h1 class="title"> Posts Tagged with <%= @tag.name %></h1>
+
+<img src="http://nwso.net/wp-content/plugins/php-image-cache/image.php?path=/wp-content/uploads/2011/11/r-kelly-smile.jpg" alt="RnB.">
+
+<%if @tag %>
+<% @tag.posts.each do |post| %>
+<div class="link">
+	<a href="/post/<%= #{post.id} %>"> <%= post.title %> </a>
+</div>
+<% end %>
+<% end %>
+
+<div class="link"><a href="/">Home</a></div>
+
+	<img src="http://nwso.net/wp-content/plugins/php-image-cache/image.php?path=/wp-content/uploads/2011/11/r-kelly-smile.jpg" alt="RnB.">

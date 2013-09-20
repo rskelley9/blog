@@ -1,0 +1,44 @@
+<div class="container">
+  <h1>Deep Thoughts</h1>
+  <p>"What's cooler than being cool?"</p>
+
+  <p><a href="/posts/list">List All Posts</a></p>
+
+
+  <div class="container">
+
+    <a href="/create">Add New Post</a>
+
+    <div>
+      <form id="search" action="/findpost" method="get">
+        <label for="post_id">Find By Post ID</label>
+        <input id="post_id" type="text" name="post[id]" placeholder="Enter post number...">
+        <input type="submit">
+      </form>
+    </div>
+    
+  </div>
+  <br>
+
+  <centered>
+    <h1 class="header">Posts</h1>
+    <% if @postlist %>
+    <% @postlist.each do |post| %>
+    <p class="title"><a href="/post/<%=post.id%>"><%= post.title %></a></p>
+      <p><%= post.created_at %></p>
+      <p><%= post.body %><p>
+        <p class="paralarge"> Tags: </p>
+        <% if post.tags.any? %>
+        <% post.tags.each do |tag| %>
+        <a href="/tag/<%= tag.id %>"><%= tag.name %></a>
+        <% end %>
+        <% else %>
+        <div class="smallital">Untagged</div>
+        <br>
+        <p class="paracolor"><a href="/tag/createtag">Tag This Post?</a></p>
+        <% end %>
+        <% end %>
+      </centered>
+      <% end %>
+
+    </div>

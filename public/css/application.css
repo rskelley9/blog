@@ -1,0 +1,56 @@
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+th {
+  text-align: left;
+}
+
+.header {
+	text-decoration: blink;
+	outline-color: blue;
+}
+
+.title{
+	font-size: 200%;
+	font-family: courier;
+	font-weight: bold;
+
+}
+
+.smallital{
+	font-size: 80%;
+	font-family: courier;
+	font-weight: bold;
+	font-style: italic;
+	color: red:;
+
+}
+
+.link{
+	font-style: underline;
+	font-weight: bolder;
+	font-size: 120%;
+	font-color: navy;
+
+}
+
+.paralarge{
+	font-size: 130%;
+	font-weight: bold;
+	font-family: courier;
+
+
+}
+
+.paracolor{
+	font-size:80%;
+	color: blue;
+	font-family: courier;
+	font-style: italic;
+
+
+
+}
